@@ -1,0 +1,38 @@
+/* Moderne, stylische Bild-Gallery */
+.gallery {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Versetzter Look */
+.gallery img:nth-child(2) {
+    margin-top: 20px;
+}
+
+.gallery img:nth-child(4) {
+    margin-top: 40px;
+}
+
+/* Hover-Effekt */
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Text unter der Gallery */
+.text_imagegalery {
+    margin-top: 15px;
+    font-size: 14px;
+    opacity: 0.7;
+}

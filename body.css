@@ -1,10 +1,13 @@
+/* Body */
 body {
     background-color: black;
     color: beige;
     display: grid;
     place-items: center;
+    font-family: Arial, sans-serif;
 }
 
+/* Titel */
 .title {
     display: grid;
     place-items: center;
@@ -20,18 +23,11 @@ body {
     margin-bottom: 0;
 }
 
-.imagegalery img {
-    height: 200px;
-}
-
-.imagegalery img:hover {
-    transform: scale(1.2);
-    transition: transform 0.3s;
-}
-
-.text_imagegalery {
-    display: grid;
-    place-content: center;
-    margin-top: 0;
-    margin-bottom: 75px;
+/* Textbereich */
+.textarea {
+    margin-top: 40px;
+    width: 80%;
+    max-width: 800px;
+    line-height: 1.6;
+    text-align: center;
 }
