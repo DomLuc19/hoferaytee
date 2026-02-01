@@ -20,10 +20,6 @@ body {
     margin-bottom: 0;
 }
 
-.imagegalery {
-    margin-top: 75px;
-}
-
 .imagegalery img {
     height: 200px;
 }
@@ -39,5 +35,3 @@ body {
     margin-top: 0;
     margin-bottom: 75px;
 }
-
-.textarea {}
