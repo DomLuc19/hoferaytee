@@ -1,11 +1,17 @@
-/* Moderne, stylische Bild-Gallery */
-.gallery {
-    margin-top: 40px;
+/* Startseite: Bild-Text-Sektion */
+.hero-section {
+    margin-top: 35px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
-    width: 90%;
-    max-width: 1000px;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.3fr);
+    gap: 28px;
+    align-items: center;
+}
+
+/* Bild-Gallery im Hero */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
 }
 
 .gallery img {
@@ -17,22 +23,45 @@
 
 /* Versetzter Look */
 .gallery img:nth-child(2) {
-    margin-top: 20px;
+    margin-top: 12px;
 }
 
 .gallery img:nth-child(4) {
-    margin-top: 40px;
+    margin-top: 24px;
 }
 
 /* Hover-Effekt */
 .gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
 }
 
-/* Text unter der Gallery */
+/* Text im Hero */
+.hero-text {
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+.hero-text p {
+    margin-top: 0;
+    margin-bottom: 14px;
+}
+
+/* Hinweis unter der Gallery */
 .text_imagegalery {
-    margin-top: 15px;
-    font-size: 14px;
+    margin-top: 10px;
+    font-size: 0.85rem;
     opacity: 0.7;
+}
+
+/* Mobile: Hero untereinander */
+@media (max-width: 900px) {
+    .hero-section {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery img:nth-child(2),
+    .gallery img:nth-child(4) {
+        margin-top: 0;
+    }
 }
