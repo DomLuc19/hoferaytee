@@ -11,6 +11,8 @@ h2 {
 
 h3 {
     align-self: center;
+    padding-bottom: 1rem;
+    padding-top: 3rem;
 }
 
 /*Startseite*/
@@ -93,6 +95,95 @@ th, td {
     padding-right: 4rem;
 }
 
+td {
+    padding-top: 1rem;
+}
+
+/*Über Mich*/
+.portrait {
+    grid-column: 2/4;
+    grid-row: 2/6;
+    padding-top: 3rem;
+    
+}
+
+.portrait img {
+    max-width: 8rem;
+    height: auto;
+}
+
+#name {
+    grid-column: 4/6;
+    grid-row: 2;
+    margin: 0;
+}
+
+#nametxt {
+    grid-column: 4/6;
+    grid-row: 3;
+    margin: 0;
+}
+
+#home {
+    grid-column: 6/8;
+    grid-row: 2;
+    margin: 0;
+}
+
+#hometxt {
+    grid-column: 6/8;
+    grid-row: 3;
+    margin: 0;
+}
+
+#school {
+    grid-column: 8/10;
+    grid-row: 2;
+    margin: 0;
+}
+
+#schooltxt {
+    grid-column: 8/13;
+    grid-row: 3;
+    margin: 0;
+}
+
+#age {
+    grid-column: 4/6;
+    grid-row: 4;
+    margin: 0;
+}
+
+#agetxt {
+    grid-column: 4/6;
+    grid-row: 5;
+    margin: 0;
+}
+
+#nationality {
+    grid-column: 6/8;
+    grid-row: 4;
+    margin: 0;
+}
+
+#nationalitytxt {
+    grid-column: 6/8;
+    grid-row: 5;
+    margin: 0;
+}
+
+#job {
+    grid-column: 8/10;
+    grid-row: 4;
+    margin: 0;
+}
+
+#jobtxt {
+    grid-column: 8/10;
+    grid-row: 5;
+    margin: 0;
+}
+
 /*MOBILE*/
 @media (max-width: 768px) {
     .page {
@@ -119,5 +210,26 @@ th, td {
     .onetimecostscontainer, .yearlycostscontainer {
         grid-row: auto;
         grid-column: 1;
+    }
+
+    /* Über Mich Mobile */
+    .portrait {
+        grid-column: 1;
+        grid-row: auto;
+        padding-top: 1rem;
+    }
+
+    .portrait img {
+        max-width: 200px;
+    }
+
+    #name, #home, #school, #age, #nationality, #job {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    #nametxt, #hometxt, #schooltxt, #agetxt, #nationalitytxt, #jobtxt {
+        grid-column: 1;
+        grid-row: auto;
     }
 }
