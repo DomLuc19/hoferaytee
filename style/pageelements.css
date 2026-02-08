@@ -92,3 +92,32 @@ th {
 th, td {
     padding-right: 4rem;
 }
+
+/*MOBILE*/
+@media (max-width: 768px) {
+    .page {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(12, auto);
+        row-gap: 2rem;
+    }
+
+    .title {
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    #webdesign, #hosting, #email, #update, #moresupport {
+        grid-row: auto;
+        grid-column: 1;
+    }
+
+    #webdesigntxt, #hostingtxt, #emailtxt, #updatetxt, #moresupporttxt {
+        grid-row: auto;
+        grid-column: 1;
+    }
+
+    .onetimecostscontainer, .yearlycostscontainer {
+        grid-row: auto;
+        grid-column: 1;
+    }
+}
