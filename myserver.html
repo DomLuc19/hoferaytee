@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="de">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Startseite</title>
+    <title>Über meinen Server</title>
     <link rel="stylesheet" href="style/base.css">
     <link rel="stylesheet" href="style/navbar.css">
     <link rel="stylesheet" href="style/pageelements.css">
@@ -36,6 +36,32 @@
     <div class="page">
         <div class="title">
             <h2>Über meinen Server</h2>
+        </div>
+        <div class="aboutmyserver">
+            <p>
+                Ich habe einen herkömmlichen Computer in einen vollwertigen Ubuntu-Server umgewandelt und betreibe ihn
+                bei mir Zuhause hinter einem Swisscom-Internetanschluss. Auf Netzwerkebene sind ausschließlich die
+                Ports 80 und 443 per Portweiterleitung freigegeben, sodass der Server nur die für Webdienste
+                notwendigen Verbindungen akzeptiert. Zusätzlich zur netzwerkseitigen Firewall des Providers schützt
+                eine präzise abgestimmte UFW-Firewall den Server und filtert eingehenden Datenverkehr nach klar
+                definierten Regeln.
+            </p>
+            <p>
+                Die Administration erfolgt primär über einen abgesicherten SSH-Zugang. Für die Anmeldung verwende ich
+                ausschließlich einen privaten SSH-Schlüssel, wodurch der Zugriff auf den Server stark eingeschränkt
+                und gegen unautorisierte Login-Versuche gehärtet ist.
+            </p>
+            <p>
+                Als Webserver kommt nginx zum Einsatz, der die Auslieferung meiner Webanwendungen zuverlässig
+                übernimmt. Die Serverumgebung basiert auf Python und Flask, wodurch sich dynamische Webinhalte
+                effizient bereitstellen lassen. Für die Verschlüsselung der Webverbindungen nutze ich Let's Encrypt,
+                sodass alle Dienste über moderne TLS-Zertifikate abgesichert sind. Systemupdates führe ich bewusst
+                manuell durch, um volle Kontrolle über den Wartungsprozess und die Stabilität der Umgebung zu behalten.
+            </p>
+            <p>
+                Insgesamt entsteht so eine schlanke, gut strukturierte und sicher konfigurierte Serverarchitektur, die
+                sowohl für private Projekte als auch für professionelle Webanwendungen eine stabile Grundlage bietet.
+            </p>
         </div>
     </div>
 </body>
