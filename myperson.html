@@ -5,28 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Über Mich</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/navbar.css">
+    <link rel="stylesheet" href="style/pageelements.css">
     <script src="script.js" defer></script>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
-    <div class="menu-container">
-        <button id="menu-toggle" class="menu-icon">
-            <img src="images/menuicon.png" alt="Menu">
-        </button>
-        <nav id="dropdown-menu">
-            <ul>
-                <li><a href="index.html">Startseite</a></li>
-                <li><a href="prices.html">Preise</a></li>
-                <li><a href="myperson.html">Über Mich</a></li>
-            </ul>
-        </nav>
+    <body>
+    <div class="topbar">
+        <div class="menu-container">
+            <button id="menu-toggle" class="menu-icon">
+                <img src="images/menuicon.png" alt="Menu">
+            </button>
+            <nav id="dropdown-menu">
+                <ul>
+                    <li><a href="index.html">Startseite</a></li>
+                    <li><a href="prices.html">Preise</a></li>
+                    <li><a href="myperson.html">Über Mich</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+        <h1>HoferAyTee</h1>
+        <div class="logo">
+            <img src="images/logo.png" alt="logo">
+        </div>
     </div>
-    <h1>HoferAyTee</h1>
     <div class="page">
         <h2>Über Mich</h2>
-        <img src="images/portrait.png" id="portrait">
+        <div class="portrait">
+            <img src="images/portrait.png" alt="portrait">
+        </div>
         <h3 id="name">Name</h3>
         <p id="nametxt">
             Dominic Hofer

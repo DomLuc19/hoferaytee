@@ -1,0 +1,45 @@
+nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    flex-direction: column;
+    background-color: #737e95;
+    border: 0.0625rem solid rgba(97, 55, 24, 0.2);
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.15);
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    z-index: 1000;
+}
+
+nav.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0.5rem 0;
+    margin: 0;
+}
+
+nav li {
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #613718;
+    display: block;
+    padding: 0.75rem 1.5rem;
+    transition: background-color 0.2s ease;
+    white-space: nowrap;
+}
+
+nav a:hover {
+    background-color: rgba(97, 55, 24, 0.1);
+}
