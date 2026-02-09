@@ -1,3 +1,19 @@
+@media (max-width: 600px) {
+    nav {
+        min-width: 120px;
+        width: 90vw;
+        left: 5vw;
+        border-radius: 0.4rem;
+        font-size: 0.97rem;
+    }
+    nav a {
+        padding: 0.6rem 1rem;
+        font-size: 0.97rem;
+    }
+    .menu-icon {
+        width: 2.2rem;
+    }
+}
 nav {
     position: absolute;
     top: 100%;

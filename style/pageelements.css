@@ -1,13 +1,49 @@
+@media (max-width: 600px) {
+    .onetimecostscontainer, .yearlycostscontainer {
+        padding: 0;
+        margin-bottom: 1rem;
+        grid-column: 1;
+        grid-row: auto;
+    }
+    table {
+        font-size: 0.95rem;
+        width: 100%;
+        display: block;
+        overflow-x: auto;
+    }
+    th, td {
+        padding: 0.4rem 0.5rem 0.4rem 0;
+        font-size: 0.95rem;
+    }
+    .portrait img {
+        max-width: 80px;
+    }
+    .form-group label {
+        font-size: 0.95rem;
+    }
+    input[type="text"], input[type="tel"], input[type="email"], textarea {
+        font-size: 0.95rem;
+        padding: 0.5rem;
+    }
+    button[type="submit"] {
+        font-size: 0.97rem;
+        padding: 0.5rem 1rem;
+    }
+}
 /* Other styles */
 
 .page {
-    /* ...existing code... */
+    /* display: flex; entfernt, damit das Grid aus base.css greift */
+    min-height: 60vh;
+}
+
+/* Kontaktseite: Formular mittig zentrieren */
+.page:has(form) {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 60vh;
-    /* ...existing code... */
+    min-height: 70vh;
 }
 
 /* Other styles */
@@ -15,6 +51,8 @@
     grid-row: 1;
     grid-column: 1/13;
     margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
 }
 
 h2 {

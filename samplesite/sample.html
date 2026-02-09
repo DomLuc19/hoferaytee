@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Website-Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="builder-header">
+    <div class="builder-controls">
+      <label>
+        Seiten:
+        <select id="pageSelect"></select>
+      </label>
+      <button id="addPageBtn">Neue Seite</button>
+      <button id="renamePageBtn">Seite umbenennen</button>
+    </div>
+
+    <div class="builder-controls">
+      <label>
+        Hintergrundfarbe:
+        <input type="color" id="bgColorPicker">
+      </label>
+      <label>
+        Hintergrundbild-URL:
+        <input type="text" id="bgImageInput" placeholder="https://...">
+      </label>
+      <button id="applyBgBtn">Hintergrund anwenden</button>
+    </div>
+
+    <div class="builder-controls">
+      <label>
+        Schriftart:
+        <select id="fontFamilySelect">
+          <option value="system-ui">System</option>
+          <option value="Arial, sans-serif">Arial</option>
+          <option value="'Times New Roman', serif">Times</option>
+          <option value="'Roboto', sans-serif">Roboto</option>
+          <option value="'Courier New', monospace">Courier</option>
+        </select>
+      </label>
+      <label>
+        Textfarbe:
+        <input type="color" id="textColorPicker" value="#000000">
+      </label>
+      <button id="applyTextStyleBtn">Auf Seite anwenden</button>
+    </div>
+
+    <div class="builder-controls">
+      <button data-type="h1" class="add-element-btn">Titel (H1)</button>
+      <button data-type="h2" class="add-element-btn">Untertitel (H2)</button>
+      <button data-type="h3" class="add-element-btn">Unter-Untertitel (H3)</button>
+      <button data-type="p" class="add-element-btn">Text</button>
+      <button data-type="img" class="add-element-btn">Bild</button>
+    </div>
+
+    <div class="builder-controls">
+      <button id="previewBtn">Vorschau & Code anzeigen</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="canvasWrapper">
+      <div id="canvas" class="canvas grid-background">
+        <!-- Elemente werden hier dynamisch eingefügt -->
+      </div>
+    </div>
+  </main>
+
+  <script src="builder.js"></script>
+</body>
+</html>
