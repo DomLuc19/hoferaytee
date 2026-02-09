@@ -101,6 +101,17 @@ label {
     font-weight: 600;
     color: #613718;
     font-size: 0.95rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .title h2 {
+        writing-mode: initial !important;
+        text-align: center;
+        margin: 0;
+        padding: 0.25rem 0;
+        width: 100%;
 }
 
 input[type="text"],
