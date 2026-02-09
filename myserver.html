@@ -16,7 +16,7 @@
     <div class="topbar">
         <div class="menu-container">
             <button id="menu-toggle" class="menu-icon">
-                <img src="images/menuicon.png" alt="Menu">
+                <img src="images/menuicon.png" alt="Menu" style="max-width:100%;height:auto;">
             </button>
             <nav id="dropdown-menu">
                 <ul>
@@ -30,34 +30,19 @@
                 </ul>
             </nav>
         </div>
-        <h1>HoferAyTee</h1>
+        <h1 style="font-size:2rem;margin:0.5rem 0;">HoferAyTee</h1>
         <div class="logo">
-            <img src="images/logo.png" alt="logo">
+            <img src="images/logo.png" alt="logo" style="max-width:100%;height:auto;">
         </div>
     </div>
     <div class="page">
         <div class="title">
-            <h2>Über meinen Server</h2>
+            <h2 style="font-size:1.2rem;">Über meinen Server</h2>
         </div>
         <div class="aboutmyserver">
-            <p>
-                Ich habe einen herkömmlichen Computer in einen vollwertigen Ubuntu-Server umgewandelt und betreibe ihn
-                bei mir Zuhause hinter einem Swisscom-Internetanschluss. Auf Netzwerkebene sind ausschließlich die
-                Ports 80 und 443 per Portweiterleitung freigegeben, sodass der Server nur die für Webdienste
-                notwendigen Verbindungen akzeptiert. Zusätzlich zur netzwerkseitigen Firewall des Providers schützt
-                eine präzise abgestimmte UFW-Firewall den Server und filtert eingehenden Datenverkehr nach klar
-                definierten Regeln.
-            </p>
-            <p>
-                Die Administration erfolgt primär über einen abgesicherten SSH-Zugang. Für die Anmeldung verwende ich
-                ausschließlich einen privaten SSH-Schlüssel, wodurch der Zugriff auf den Server stark eingeschränkt
-                und gegen unautorisierte Login-Versuche gehärtet ist.
-            </p>
-            <p>
-                Als Webserver kommt nginx zum Einsatz, der die Auslieferung meiner Webanwendungen zuverlässig
-                übernimmt. Die Serverumgebung basiert auf Python und Flask, wodurch sich dynamische Webinhalte
-                effizient bereitstellen lassen. Für die Verschlüsselung der Webverbindungen nutze ich Let's Encrypt,
-                sodass alle Dienste über moderne TLS-Zertifikate abgesichert sind. Systemupdates führe ich bewusst
+            <p style="font-size:0.97rem;line-height:1.5;">Ich habe einen herkömmlichen Computer in einen vollwertigen Ubuntu-Server umgewandelt und betreibe ihn bei mir Zuhause hinter einem Swisscom-Internetanschluss. Auf Netzwerkebene sind ausschließlich die Ports 80 und 443 per Portweiterleitung freigegeben, sodass der Server nur die für Webdienste notwendigen Verbindungen akzeptiert. Zusätzlich zur netzwerkseitigen Firewall des Providers schützt eine präzise abgestimmte UFW-Firewall den Server und filtert eingehenden Datenverkehr nach klar definierten Regeln.</p>
+            <p style="font-size:0.97rem;line-height:1.5;">Die Administration erfolgt primär über einen abgesicherten SSH-Zugang. Für die Anmeldung verwende ich ausschließlich einen privaten SSH-Schlüssel, wodurch der Zugriff auf den Server stark eingeschränkt und gegen unautorisierte Login-Versuche gehärtet ist.</p>
+            <p style="font-size:0.97rem;line-height:1.5;">Als Webserver kommt nginx zum Einsatz, der die Auslieferung meiner Webanwendungen zuverlässig übernimmt. Die Serverumgebung basiert auf Python und Flask, wodurch sich dynamische Webinhalte effizient bereitstellen lassen. Für die Verschlüsselung der Webverbindungen nutze ich Let's Encrypt, sodass alle Dienste über moderne TLS-Zertifikate abgesichert sind. Systemupdates führe ich bewusst
                 manuell durch, um volle Kontrolle über den Wartungsprozess und die Stabilität der Umgebung zu behalten.
             </p>
             <p>
