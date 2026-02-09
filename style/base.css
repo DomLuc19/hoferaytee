@@ -14,10 +14,21 @@
         padding: 0.5rem 0.5rem;
         align-items: stretch;
     }
+    .site-title {
+        font-size: 1.1rem;
+        margin: 0.2rem 0;
+        text-align: center;
+    }
     .logo {
         width: 2.5rem;
         margin-bottom: 0.5rem;
         align-self: center;
+    }
+    .logo img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
     }
     .page {
         display: block;
