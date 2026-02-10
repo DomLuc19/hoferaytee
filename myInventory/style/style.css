@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-decoration: double underline;
+    margin-bottom: 2rem;
+}
+
+.buttons, form, tr {
+    display: flex;
+    gap: 2rem;
+}
+
+.buttons :hover {
+    cursor: pointer;
+}
+
+form button:hover {
+    cursor: pointer;
+}
+

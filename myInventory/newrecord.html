@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>New Record</title>
+</head>
+<body>
+    <h1>New Record</h1>
+    <form id="newRecordForm">
+        <input type="text" name="itemName" placeholder="Item Name" required>
+        <input type="number" name="quantity" placeholder="Quantity" required>
+        <input type="number" name="price" placeholder="Price" required>
+        <input type="date" name="dateAdded" placeholder="Date Added" required>
+        <button type="submit">Add Record</button>
+    </form>
+
+    <form id="editForm" style="display:none; margin-top:20px;">
+        <h3>Edit Item</h3>
+        <input type="text" id="editName" placeholder="Item Name">
+        <input type="number" id="editQuantity" placeholder="Quantity">
+        <input type="number" id="editPrice" placeholder="Price">
+        <input type="date" id="editDate" placeholder="Date Added">
+        <button type="submit">Save</button>
+    </form>
+
+    <h3>All Items</h3>
+    <div id="itemsList"></div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
