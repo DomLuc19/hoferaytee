@@ -22,7 +22,7 @@ document.getElementById('registerForm')?.addEventListener('submit', async (e) =>
     }
 
     try {
-        const response = await fetch("http://127.0.0.1:5000/register", {
+        const response = await fetch("http://127.0.0.1:5001/register", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
@@ -49,7 +49,7 @@ document.getElementById('registerForm')?.addEventListener('submit', async (e) =>
 });
 
 // -------------------------
-// LOGIN (REAL BACKEND CHECK)
+// LOGIN
 // -------------------------
 document.getElementById('loginForm')?.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -61,7 +61,7 @@ document.getElementById('loginForm')?.addEventListener('submit', async (e) => {
     };
 
     try {
-        const response = await fetch("http://127.0.0.1:5000/login", {
+        const response = await fetch("http://127.0.0.1:5001/login", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(data)
@@ -76,7 +76,6 @@ document.getElementById('loginForm')?.addEventListener('submit', async (e) => {
 
         alert(result.message || "Login successful!");
         form.reset();
-        // Simple redirect after login
         window.location.href = 'index.html';
     } catch (err) {
         console.error(err);
@@ -99,7 +98,7 @@ document.getElementById('newRecordForm')?.addEventListener('submit', async (e) =
     };
 
     try {
-        const response = await fetch("http://127.0.0.1:5000/items", {
+        const response = await fetch("http://127.0.0.1:5001/items", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(data)
@@ -114,7 +113,7 @@ document.getElementById('newRecordForm')?.addEventListener('submit', async (e) =
 
         alert(result.message || "Item created successfully.");
         form.reset();
-        // Reload list if visible
+
         if (document.getElementById("itemsList")) {
             loadItems();
         }
@@ -125,11 +124,11 @@ document.getElementById('newRecordForm')?.addEventListener('submit', async (e) =
 });
 
 // -------------------------
-// LOAD ITEMS (for newrecord page)
+// LOAD ITEMS
 // -------------------------
 async function loadItems() {
     try {
-        const response = await fetch("http://127.0.0.1:5000/items");
+        const response = await fetch("http://127.0.0.1:5001/items");
         const items = await response.json();
 
         const list = document.getElementById("itemsList");
@@ -163,7 +162,7 @@ async function deleteItem(id) {
     if (!confirm("Are you sure you want to delete this item?")) return;
 
     try {
-        const response = await fetch(`http://127.0.0.1:5000/items/${id}`, {
+        const response = await fetch(`http://127.0.0.1:5001/items/${id}`, {
             method: "DELETE"
         });
 
@@ -183,11 +182,11 @@ async function deleteItem(id) {
 }
 
 // -------------------------
-// EDIT ITEM (LOAD INTO FORM)
+// EDIT ITEM
 // -------------------------
 async function editItem(id) {
     try {
-        const response = await fetch(`http://127.0.0.1:5000/items/${id}`);
+        const response = await fetch(`http://127.0.0.1:5001/items/${id}`);
         const item = await response.json();
 
         if (!response.ok) {
@@ -225,7 +224,7 @@ document.getElementById("editForm")?.addEventListener("submit", async (e) => {
     };
 
     try {
-        const response = await fetch(`http://127.0.0.1:5000/items/${id}`, {
+        const response = await fetch(`http://127.0.0.1:5001/items/${id}`, {
             method: "PUT",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(data)
@@ -249,14 +248,14 @@ document.getElementById("editForm")?.addEventListener("submit", async (e) => {
 });
 
 // -------------------------
-// LOAD RECORDS TABLE (myrecords.html)
+// LOAD RECORDS TABLE
 // -------------------------
 async function loadMyRecords() {
     const table = document.querySelector(".myRecordsTable");
     if (!table) return;
 
     try {
-        const response = await fetch("http://127.0.0.1:5000/items");
+        const response = await fetch("http://127.0.0.1:5001/items");
         const items = await response.json();
 
         items.forEach(item => {
@@ -276,7 +275,7 @@ async function loadMyRecords() {
 }
 
 // -------------------------
-// ON LOAD: decide what to do
+// ON LOAD
 // -------------------------
 window.addEventListener('load', () => {
     if (document.getElementById("itemsList")) {
