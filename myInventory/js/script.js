@@ -1,3 +1,5 @@
+const API_URL = "https://api.hoferaytee.ch";
+
 // -------------------------
 // REGISTRATION
 // -------------------------
@@ -12,6 +14,7 @@ document.getElementById('registerForm')?.addEventListener('submit', async (e) =>
         confirmPassword: form.confirmPassword.value
     };
 
+    // Frontend Validierung
     if (data.password.length < 6) {
         alert('Password must be at least 6 characters long.');
         return;
@@ -22,13 +25,14 @@ document.getElementById('registerForm')?.addEventListener('submit', async (e) =>
     }
 
     try {
-        const response = await fetch("http://127.0.0.1:5001/register", {
+        const response = await fetch(`${API_URL}/register`, {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
                 username: data.username,
                 email: data.email,
-                password: data.password
+                password: data.password,
+                password2: data.confirmPassword   // <-- WICHTIG!
             })
         });
 
@@ -61,7 +65,7 @@ document.getElementById('loginForm')?.addEventListener('submit', async (e) => {
     };
 
     try {
-        const response = await fetch("http://127.0.0.1:5001/login", {
+        const response = await fetch(`${API_URL}/login`, {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(data)
@@ -98,7 +102,7 @@ document.getElementById('newRecordForm')?.addEventListener('submit', async (e) =
     };
 
     try {
-        const response = await fetch("http://127.0.0.1:5001/items", {
+        const response = await fetch(`${API_URL}/items`, {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(data)
@@ -128,7 +132,7 @@ document.getElementById('newRecordForm')?.addEventListener('submit', async (e) =
 // -------------------------
 async function loadItems() {
     try {
-        const response = await fetch("http://127.0.0.1:5001/items");
+        const response = await fetch(`${API_URL}/items`);
         const items = await response.json();
 
         const list = document.getElementById("itemsList");
@@ -162,7 +166,7 @@ async function deleteItem(id) {
     if (!confirm("Are you sure you want to delete this item?")) return;
 
     try {
-        const response = await fetch(`http://127.0.0.1:5001/items/${id}`, {
+        const response = await fetch(`${API_URL}/items/${id}`, {
             method: "DELETE"
         });
 
@@ -186,7 +190,7 @@ async function deleteItem(id) {
 // -------------------------
 async function editItem(id) {
     try {
-        const response = await fetch(`http://127.0.0.1:5001/items/${id}`);
+        const response = await fetch(`${API_URL}/items/${id}`);
         const item = await response.json();
 
         if (!response.ok) {
@@ -224,7 +228,7 @@ document.getElementById("editForm")?.addEventListener("submit", async (e) => {
     };
 
     try {
-        const response = await fetch(`http://127.0.0.1:5001/items/${id}`, {
+        const response = await fetch(`${API_URL}/items/${id}`, {
             method: "PUT",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(data)
@@ -255,7 +259,7 @@ async function loadMyRecords() {
     if (!table) return;
 
     try {
-        const response = await fetch("http://127.0.0.1:5001/items");
+        const response = await fetch(`${API_URL}/items`);
         const items = await response.json();
 
         items.forEach(item => {
