@@ -1,7 +1,15 @@
 from flask import Flask, request, jsonify
 import sqlite3
+from flask_cors import CORS
+from werkzeug.security import generate_password_hash
+from werkzeug.security import check_password_hash
 
 app = Flask(__name__)
+
+CORS(app, origins=[
+    "https://hoferaytee.ch",
+    "https://api.hoferaytee.ch"
+])
 
 def get_db():
     conn = sqlite3.connect("database.db")
@@ -27,13 +35,17 @@ def register():
     if not username or not email or not password:
         return jsonify({"error": "Missing fields"}), 400
 
+    # Passwort hashing
+    password_hash = generate_password_hash(password)
+
     try:
         db = get_db()
         db.execute(
             "INSERT INTO users (username, email, password) VALUES (?, ?, ?)",
-            (username, email, password)
+            (username, email, password_hash)
         )
         db.commit()
+
         return jsonify({"message": "Registration successful"}), 200
 
     except sqlite3.IntegrityError:
@@ -58,11 +70,16 @@ def login():
 
     db = get_db()
     row = db.execute(
-        "SELECT * FROM users WHERE username = ? AND password = ?",
-        (username, password)
+        "SELECT * FROM users WHERE username = ?",
+        (username,)
     ).fetchone()
 
     if row is None:
+        return jsonify({"error": "Invalid username or password"}), 401
+
+    # Check hashed-password
+
+    if not check_password_hash(row["password"], password):
         return jsonify({"error": "Invalid username or password"}), 401
 
     return jsonify({
