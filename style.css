@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    gap: 2rem;
+}
+
+
+/* -------------
+   STRUCTURE
+   -------------*/
+
+/* Header */
+header {
+    background: #737e95;
+    grid-column: 1 / 13;
+    grid-row: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Page */
+main {
+    grid-column: 1 / 13;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 2rem;
+}
+
+/* Footer */
+footer {
+    grid-column: 1 / 13;
+    grid-row: 3;
+    text-align: left;
+    padding: 3rem;
+    background: #737e95;
+    color: #613718;
+}
+
+/* ---------------
+    ALLOVER ELEMENTS
+    ---------------*/
+/* Title */
+#menuContainer {
+    border: none;
+}
+
+#menuContainer img {
+    border: none;
+    background: #737e95;
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menuContainer button {
+    border: none;
+}
+
+#siteTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    color: #613718;
+}
+
+header p {
+    color: #613718;
+}
+
+#logo img {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navbar */
+#dropDownMenu {
+    display: none;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    background: #737e95;
+}
+
+#dropDownMenu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+#dropDownMenu ul li a {
+    color: #613718;
+    text-decoration: none;
+}
+
+#menuContainer:hover #dropDownMenu,
+#menuContainer:focus-within #dropDownMenu {
+    display: block;
+}
+
+/* -----------------
+   MAIN ELEMENTS
+   ----------------*/
+#titleOverview {
+    grid-column: 1 / 3;
+    grid-row: 1;
+    color: #613718;
+    text-align: center;
+}
+#overview {
+    grid-column: 1 / 3;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 2rem;
+}
+#welcome {
+    grid-column: 1 / 3;
+    grid-row: 1;
+}
+#yourPartner {
+    grid-column: 1 / 3;
+    grid-row: 2;
+}
+#allTheTime {
+    grid-column: 1 / 3;
+    grid-row: 3;
+}
+#yourPartner img, #allTheTime img {
+    width: 7rem;
+    height: 7rem;
+}
+
+#titleService {
+    grid-column: 1 / 3;
+    grid-row: 3;
+    color: #613718;
+    text-align: center;
+}
+#pageElementService1 {
+    grid-column: 1 / 3;
+    grid-row: 4;
+    display: flex;
+}
+#pageElementService2 {
+    grid-column: 1 / 3;
+    grid-row: 5;
+    display: flex;
+}
+#pageElementService1 img, #pageElementService2 img {
+    width: 7rem;
+    height: 7rem;
+}
+
+#titlePrice {
+    grid-column: 1 / 3;
+    grid-row: 6;
+    color: #613718;
+    text-align: center;
+}
+#pageElementPrice {
+    grid-column: 1 / 3;
+    grid-row: 7;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 2rem;
+}
+#oneOffPrices {
+    grid-column: 1;
+    grid-row: 1;
+}
+#yearlyPrices {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#titleAboutMe {
+    grid-column: 1;
+    grid-row: 8;
+    color: #613718;
+    text-align: center;
+}
+#pageElementAboutMe {
+    grid-column: 1;
+    grid-row: 9;
+    display: flex;
+}
+
+#titleContact {
+    grid-column: 2;
+    grid-row: 8;
+    color: #613718;
+    text-align: center;
+}
+#pageElementContact {
+    grid-column: 2;
+    grid-row: 9;
+    display: flex;
+}
