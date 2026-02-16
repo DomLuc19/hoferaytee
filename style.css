@@ -9,7 +9,6 @@ body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
-    gap: 2rem;
 }
 
 
@@ -34,7 +33,7 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 /* Footer */
@@ -45,10 +44,11 @@ footer {
     padding: 3rem;
     background: #737e95;
     color: #613718;
+    margin-top: 3rem;
 }
 
 /* ---------------
-    ALLOVER ELEMENTS
+    Header ELEMENTS
     ---------------*/
 /* Title */
 #menuContainer {
@@ -127,6 +127,8 @@ header p {
     grid-row: 1;
     color: #613718;
     text-align: center;
+    margin-top: 2rem;
+    
 }
 #overview {
     grid-column: 1 / 3;
@@ -135,18 +137,44 @@ header p {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     gap: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
 }
 #welcome {
+    padding: 1rem;
     grid-column: 1 / 3;
     grid-row: 1;
+    text-align: center;
+    border-style: double;
+    border-width: 0.7rem;
+    border-color: #613718;
+}
+#welcome button {
+    border: none;
+    background: #613718;
+    color: white;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    border-radius: 2rem;
+    margin-top: 1rem    ;
 }
 #yourPartner {
-    grid-column: 1 / 3;
+    padding: 1rem;
+    grid-column: 1;
     grid-row: 2;
+    text-align: center;
+    border-style: double;
+    border-width: 0.7rem;
+    border-color: #613718;
 }
 #allTheTime {
-    grid-column: 1 / 3;
-    grid-row: 3;
+    padding: 1rem;
+    grid-column: 2;
+    grid-row: 2;
+    text-align: center;
+    border-style: double;
+    border-width: 0.7rem;
+    border-color: #613718;
 }
 #yourPartner img, #allTheTime img {
     width: 7rem;
@@ -158,20 +186,39 @@ header p {
     grid-row: 3;
     color: #613718;
     text-align: center;
+    margin-top: 2rem;
 }
 #pageElementService1 {
     grid-column: 1 / 3;
     grid-row: 4;
     display: flex;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+#serviceElementWebdesign, #serviceElementHosting, #serviceElementEmail {
+    flex: 1;
 }
 #pageElementService2 {
     grid-column: 1 / 3;
     grid-row: 5;
     display: flex;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+#serviceElementApplications, #serviceElementUpdates, #serviceElementMoreSupport {
+    flex: 1;
 }
 #pageElementService1 img, #pageElementService2 img {
     width: 7rem;
     height: 7rem;
+}
+#pageElementService1 button, #pageElementService2 button {  
+    border: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    border-radius: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 #titlePrice {
@@ -179,6 +226,7 @@ header p {
     grid-row: 6;
     color: #613718;
     text-align: center;
+    margin-top: 2.5rem;
 }
 #pageElementPrice {
     grid-column: 1 / 3;
@@ -186,7 +234,9 @@ header p {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
-    gap: 2rem;
+    gap: 2.5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
 }
 #oneOffPrices {
     grid-column: 1;
@@ -196,17 +246,32 @@ header p {
     grid-column: 2;
     grid-row: 1;
 }
+#oneOffPrices tr, #yearlyPrices tr {
+    text-align: left;
+}
+#oneOffPrices th, #oneOffPrices td, #yearlyPrices th, #yearlyPrices td {
+    padding: 2rem;
+    border-bottom: dotted 1px #613718;
+}
 
 #titleAboutMe {
     grid-column: 1;
     grid-row: 8;
     color: #613718;
     text-align: center;
+    margin-top: 2.5rem;
 }
 #pageElementAboutMe {
     grid-column: 1;
     grid-row: 9;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin-left: 3rem;
+    border-style: double;
+    border-width: 0.7rem;
+    border-color: #613718;
 }
 
 #titleContact {
@@ -214,9 +279,31 @@ header p {
     grid-row: 8;
     color: #613718;
     text-align: center;
+    margin-top: 2.5rem;
 }
 #pageElementContact {
     grid-column: 2;
     grid-row: 9;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#contactFormName, #contactFormEmail, #contactFormMessage, #contactFormSubmit {
+    margin-bottom: 1rem;
+}
+
+/* Subpages */
+#titleApplications, #titleHosting, #titleEmail, #titleWebdesign, #titleUpdates, #titleMoreSupport {
+    grid-column: 1 / 3;
+    grid-row: 1;
+    color: #613718;
+    text-align: center;
+    margin-top: 2rem;
+}
+#textApplications, #textHosting, #textEmail, #textWebdesign, #textUpdates, #textMoreSupport {
+    grid-column: 1 / 3;
+    grid-row: 2;
+    text-align: center;
+    margin-left: 3rem;
+    margin-right: 3rem;
 }

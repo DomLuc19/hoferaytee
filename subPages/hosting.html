@@ -5,31 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HoferAyTee</title>
-    <link rel="stylesheet" href="../style/index.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
     <header>
-        <div class="menuContainer">
-            <button class="menuButton">
+        <div id="menuContainer">
+            <button id="menuButton">
                 <img src="../images/menuIcon.png" alt="Menu Icon">
             </button>
-            <nav class="dropDownMenu">
+            <nav id="dropDownMenu">
                 <ul>
                     <li><a href="../index.html#titleOverview">Overview</a></li>
-                    <li class="hasSubMenu">
+                    <li>
                         <a href="../index.html#titleService">Services</a>
-                        <ul class="subMenu">
+                        <ul>
                             <li><a href="webdesign.html">Webdesign</a></li>
                             <li><a href="hosting.html">Hosting</a></li>
                             <li><a href="email.html">Email</a></li>
-                            <li class="hasSubMenu">
-                                <a href="applications.html">Applications</a>
-                                <ul class="subMenu">
-                                    <li><a href="../../sampleSiteApp/sample.html">Sample Webseite Tool</a></li>
-                                    <li><a href="../../inventoryApp/registration.html">Inventory App</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="applications.html">Applications</a></li>
                             <li><a href="updates.html">Updates</a></li>
                             <li><a href="moreSupport.html">More Support</a></li>
                         </ul>
@@ -40,13 +34,22 @@
                 </ul>
             </nav>
         </div>
-        <div class="siteTitle">
+        <div id="siteTitle">
             <h1>HoferAyTee</h1>
             <p>The man you call for webdesign, hosting, SQL, and more!</p>
         </div>
-        <div class="logo">
+        <div id="logo">
             <img src="../images/logo.png" alt="HoferAyTee Logo">
         </div>
     </header>
+    <main>
+        <h2 id="titleHosting">Hosting</h2>
+        <p id="textHosting">I provide reliable and secure hosting services for your website.</p>
+    </main>
+    <footer>
+        <p>&copy; 2026 HoferAyTee. All rights reserved. | <a href="../imprint.html">Imprint</a> | <a
+                href="../privacy.html">Privacy Policy</a></p>
+    </footer>
 </body>
+
 </html>
