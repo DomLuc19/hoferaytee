@@ -130,7 +130,7 @@ header p {
     margin-top: 2rem;
     
 }
-#overview {
+#pageElementOverview {
     grid-column: 1 / 3;
     grid-row: 2;
     display: grid;
@@ -312,6 +312,11 @@ header p {
    MEDIA
 ------------*/
 @media (max-width: 768px) {
+    .pageElement {
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
     #pageElementService1, #pageElementService2 {
         display: flex;
         flex-direction: column;
