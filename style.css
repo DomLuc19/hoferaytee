@@ -312,16 +312,14 @@ header p {
    MEDIA
 ------------*/
 @media (max-width: 768px) {
-    .pageElement {
+    * {
         margin: 0;
         padding: 0;
-        border: none;
+        box-sizing: border-box;
     }
-    #pageElementService1, #pageElementService2 {
-        display: flex;
-        flex-direction: column;
-    }
-    #pageElementPrice {
+
+    body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
         display: flex;
         flex-direction: column;
     }
