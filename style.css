@@ -311,7 +311,7 @@ header p {
 /*-----------
    MEDIA
 ------------*/
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     * {
         margin: 0;
         padding: 0;
