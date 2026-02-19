@@ -311,5 +311,171 @@ header p {
 /*-----------
    MEDIA
 ------------*/
-@media (max-width: 900px) {
+@media (max-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 1;
+    }
+
+    /* Header */
+    header {
+        background: #737e95;
+        grid-column: 1;
+        grid-row: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Page Elements */
+    #titleOverview {
+        grid-column: 1;
+        grid-row: 2;
+        color: #613718;
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    #welcome {
+        grid-column: 1;
+        grid-row: 3;
+        text-align: center;
+        margin-top: 1rem;
+        border-style: double;
+        border-width: 0.7rem;
+        border-color: #613718;
+    }
+
+    #yourPartner {
+        grid-column: 1;
+        grid-row: 4;
+        text-align: center;
+        margin-top: 1rem;
+        border-style: double;
+        border-width: 0.7rem;
+        border-color: #613718;
+    }
+
+    #allTheTime {
+        grid-column: 1;
+        grid-row: 5;
+        text-align: center;
+        margin-top: 1rem;
+        border-style: double;
+        border-width: 0.7rem;
+        border-color: #613718;
+    }
+
+    #titleService {
+        grid-column: 1;
+        grid-row: 6;
+        color: #613718;
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    #pageElementService1 {
+        grid-column: 1;
+        grid-row: 7;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    #pageElementService2 {
+        grid-column: 1;
+        grid-row: 8;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    #titlePrice {
+        grid-column: 1;
+        grid-row: 9;
+        color: #613718;
+        text-align: center;
+        margin-top: 2.5rem;
+    }
+
+    #oneOffPrices {
+        grid-column: 1;
+        grid-row: 10;
+        text-align: left;
+        margin-top: 1rem;
+    }
+
+    #yearlyPrices {
+        grid-column: 1;
+        grid-row: 11;
+        text-align: left;
+        margin-top: 1rem;
+    }
+
+    #titleAboutMe {
+        grid-column: 1;
+        grid-row: 12;
+        color: #613718;
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    #pageElementAboutMe {
+        grid-column: 1;
+        grid-row: 13;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        margin-top: 1rem;
+        border-style: double;
+        border-width: 0.7rem;
+        border-color: #613718;
+    }
+
+    #titleContact {
+        grid-column: 1;
+        grid-row: 14;
+        color: #613718;
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    #pageElementContact {
+        grid-column: 1;
+        grid-row: 15;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    #status {
+        grid-column: 1;
+        grid-row: 16;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    footer {
+        grid-column: 1;
+        grid-row: 17;
+        text-align: left;
+        padding: 3rem;
+        background: #737e95;
+        color: #613718;
+        margin-top: 2rem;
+    }
+
 }
