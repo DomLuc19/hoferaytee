@@ -6,218 +6,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HoferAyTee</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.ico">
 </head>
 
 <body>
     <header>
-        <div id="menuContainer">
-            <button id="menuButton">
-                <img src="images/menuIcon.png" alt="Menu Icon">
-            </button>
-            <nav id="dropDownMenu">
+        <button id="bMenu">
+            <img src="images/menuIcon.png" id="menu" alt="Menu Icon">
+            <nav id="ddMenu">
                 <ul>
-                    <li><a href="#titleOverview">Overview</a></li>
-                    <li>
-                        <a href="#titleService">Services</a>
-                        <ul>
-                            <li><a href="subPages/webdesign.html">Webdesign</a></li>
-                            <li><a href="subPages/hosting.html">Hosting</a></li>
-                            <li><a href="subPages/email.html">Email</a></li>
-                            <li><a href="subPages/applications.html">Applications</a></li>
-                            <li><a href="subPages/updates.html">Updates</a></li>
-                            <li><a href="subPages/moreSupport.html">More Support</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#titlePrices">Prices</a></li>
-                    <li><a href="#titleAboutMe">About Me</a></li>
-                    <li><a href="#titleContact">Contact</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
-        </div>
-        <div id="siteTitle">
-            <h1>HoferAyTee</h1>
-            <p>The man you call for webdesign, hosting, SQL, and more!</p>
-        </div>
-        <div id="logo">
-            <img src="images/logo.png" alt="HoferAyTee Logo">
-        </div>
+        </button>
+        <h1>HoferAyTee</h1>
+        <p>The man you call for webdesign, hosting, SQL, and more</p>
+        <img src="images/logo.png" id="logo" alt="Logo">
     </header>
     <main>
-        <h2 class="pageElement" id="titleOverview">Overview</h2>
-        <div class="pageElement" id="pageElementOverview">
-            <div id="welcome">
-                <h3>Your Partner for Websites</h3>
-                <p>I design, host and maintain your website – individually, securely and reliably. Get
-                    started with your online presence now!</p>
-                <a id="contact" href="#titleContact">
-                    <button class="contactButton">
-                        <p>Contact Me</p>
-                    </button>
-                </a>
+        <h2>Overview</h2>
+        <div class="overview">
+            <div id="overview1">
+                <h3>Your Partner</h3>
+                <p>I design host and maintain your website - individually, reliably and securely. Get startet with your
+                    online presence now!</p>
+                <button id="contact" href="#">Contact Me</button>
             </div>
-            <div id="yourPartner">
-                <img src="images/partner.png" alt="Partner Image">
+            <div id="overview2">
                 <h3>Together</h3>
-                <p>We find the best way to make your online presence impactful and effective. Contact me for
-                    a free consultation and let's discuss how I can help you achieve your online goals.</p>
+                <img src="images/partner.png">
+                <p>We find the best way to make your online presence impactful and successful.</p>
             </div>
-            <div id="allTheTime">
-                <img src="images/maintenance.png" alt="Maintenance Image">
-                <h3>I am Available</h3>
-                <p>For my clients all day, every day. Since you decide to work with me you get
-                    24/7 support!</p>
-            </div>
-        </div>
-
-        <h2 class="pageElement" id="titleService">Services</h2>
-        <div class="pageElement" id="pageElementService1">
-            <div id="serviceElementWebdesign">
-                <a href="subPages/webdesign.html">
-                    <button id="buttonWebdesign" url="subPages/webdesign.html">
-                        <h3>Webdesign</h3>
-                        <img src="images/webdesign.png" alt="Webdesign Service Image">
-                        <p>I design static websites after your individual wishes and requirements.</p>
-                    </button>
-                </a>
-            </div>
-            <div id="serviceElementHosting">
-                <a href="subPages/hosting.html">
-                    <button id="buttonHosting">
-                        <h3>Hosting</h3>
-                        <img src="images/hosting.png" alt="Hosting Service Image">
-                        <p>I host websites on my own server, so you can be sure that I have access to hardware
-                            components all the time.</p>
-                    </button>
-                </a>
-            </div>
-            <div id="serviceElementEmail">
-                <a href="subPages/email.html">
-                    <button id="buttonEmail">
-                        <h3>Domain & Email</h3>
-                        <img src="images/email.png" alt="Email Service Image">
-                        <p>With my email-package you get a professional email solution. Of course it's named
-                            after your domain-name. I work with Hostpoint,a leading partner for domains and email
-                            services.</p>
-                    </button>
-                </a>
+            <div id="overview3">
+                <h3>All the Time</h3>
+                <img src="images/maintenance.png">
+                <p>I am available for my clients for support!</p>
             </div>
         </div>
-        <div class="pageElement" id="pageElementService2">
-            <div id="serviceElementApplications">
-                <a href="subPages/applications.html">
-                    <button id="buttonApplications">
-                        <h3>Applications</h3>
-                        <img src="images/applications.png" alt="Applications Service Image">
-                        <p>I provide applications to help you run your business more effectively. For my clients they
-                            are free!</p>
-                    </button>
-                </a>
-            </div>
-            <div id="serviceElementUpdates">
-                <a href="subPages/updates.html">
-                    <button id="buttonUpdates">
-                        <h3>Updates</h3>
-                        <img src="images/updates.png" alt="Updates Service Image">
-                        <p>To make your website always up-to-date we make a plan together how we can achieve this.
-                            I'm forced to make it as simple as possible for you!</p>
-                    </button>
-                </a>
-            </div>
-            <div id="serviceElementMoreSupport">
-                <a href="subPages/moreSupport.html">
-                    <button id="buttonMoreSupport">
-                        <h3>More Support</h3>
-                        <img src="images/moreSupport.png" alt="More Support Service Image">
-                        <p>I can also help you with different aspects of technical support. Just contact me!</p>
-                    </button>
-                </a>
-            </div>
+        <h2>About me</h2>
+        <div class="textArea">
+            <p>My Name is Dominic Hofer. I am a web designer and developer. I live in Lupsingen a small village in the
+                canton of Basel-Landschaft in Switzerland.<br>I study at the Fachhochschule Nordwestschweiz in the field
+                of Electrical Engineering. Currently I'm in the 3th semester. My goal is to specify in the field of
+                embedded systems and webdesign.<br>My first job-training was as a electrician. This happend between 2017
+                and 2021. I got experience in the world of work!<br>As a child I was very intrested in football but with
+                the time came more and more fascination for computers and technology. I hope I can use my knowledge and
+                skills to build your website!</p>
+            <img id="portrait" src="images/portrait.png" alt="Portrait of Dominic Hofer">
         </div>
-
-        <h2 class="pageElement" id="titlePrice">Prices</h2>
-        <div class="pageElement" id="pageElementPrice">
-            <div id="oneOffPrices">
-                <h3>One-Off Prices</h3>
-                <table>
-                    <tr>
-                        <th>Service</th>
-                        <th>Price</th>
-                    </tr>
-                    <tr>
-                        <td>First Consultation</td>
-                        <td>Free</td>
-                    </tr>
-                    <tr>
-                        <td>Web-Design</td>
-                        <td>from CHF 500.-</td>
-                    </tr>
-                    <tr>
-                        <td>Web-Application</td>
-                        <td>from CHF 1000.-</td>
-                    </tr>
-                    <tr>
-                        <td>SQL-Database</td>
-                        <td>from CHF 300.-</td>
-                    </tr>
-                </table>
+        <h2>Services</h2>
+        <div class="service">
+            <h3>Webdesign</h3>
+            <p>I create modern and user-friendly websites all after your personal wishes and requirements.</p>
+            <img src="images/webdesign.png">
+        </div>
+        <div class="service">
+            <h3>Applications and Databases</h3>
+            <p>I develop your web applications and databases tailored to your specific needs.</p>
+            <img src="images/applications.png">
+        </div>
+        <div class="service">
+            <h3>Email and Domain</h3>
+            <p>I get your domain and your matching email adress which you can use on outlook and other email services.
+            </p>
+            <img src="images/email.png">
+        </div>
+        <div class="service">
+            <h3>Hosting</h3>
+            <p>I host your product on my personal server, ensuring reliable and secure access.</p>
+            <img src="images/hosting.png">
+        </div>
+        <h2>Pricing</h2>
+        <table>
+            <tr>
+                <th>Service</th>
+                <th>One-Off-Price</th>
+            </tr>
+            <tr>
+                <td>Webdesign</td>
+                <td>from 500 CHF</td>
+            </tr>
+            <tr>
+                <td>Applications and Databases</td>
+                <td>from 1000 CHF</td>
+            </tr>
+            <tr>
+                <th>Service</th>
+                <th>Recurring Price</th>
+            </tr>
+            <tr>
+                <td>Domain</td>
+                <td>from 12 CHF per year</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>from 60 CHF per year</td>
+            </tr>
+            <tr>
+                <td>Hosting</td>
+                <td>from 80 CHF per year</td>
+            </tr>
+        </table>
+    </main>
+    <footer>
+        <p>Copyright © 2024 HoferAyTee. All rights reserved.</p>
+        <form id="contactForm">
+            <div id="contactFormName">
+                <input type="text" name="name" placeholder="Name" required>
             </div>
-            <div id="yearlyPrices">
-                <h3>Yearly Prices</h3>
-                <table>
-                    <tr>
-                        <th>Service</th>
-                        <th>Price</th>
-                    </tr>
-                    <tr>
-                        <td>Domain</td>
-                        <td>from CHF 20.-/year</td>
-                    </tr>
-                    <tr>
-                        <td>Hosting</td>
-                        <td>from CHF 50.-/year</td>
-                    </tr>
-                    <tr>
-                        <td>Email</td>
-                        <td>from CHF 60.-/year</td>
-                    </tr>
-                    <tr>
-                        <td>Ranking-Coach</td>
-                        <td>from CHF 80.-/year</td>
-                    </tr>
-                    <tr>
-                        <td>Maintenance & Updates</td>
-                        <td>from CHF 120.-/year</td>
-                    </tr>
-                </table>
+            <div id="contactFormEmail">
+                <input type="email" name="email" placeholder="E-Mail" required>
             </div>
-        </div>
-
-        <h2 class="pageElement" id="titleAboutMe">About Me</h2>
-        <div class="pageElement" id="pageElementAboutMe">
-            <p>My name is Dominic Hofer and I'm studying at the FHNW. My goal is to run a business in webservices.
-                I'm 25 years old and my first job-training was electrician. Now I'm more exited with computers and
-                programming. My place of living is in Lupsingen, a small village in the canton of Baselland.</p>
-        </div>
-
-        <h2 class="pageElement" id="titleContact">Contact</h2>
-        <div class="pageElement" id="pageElementContact">
-            <form id="contactForm">
-                <div id="contactFormName">
-                    <input type="text" name="name" placeholder="Name" required>
-                </div>
-                <div id="contactFormEmail">
-                    <input type="email" name="email" placeholder="E-Mail" required>
-                </div>
-                <div id="contactFormMessage">
-                    <textarea name="message" placeholder="Message" required></textarea>
-                </div>
-                <div id="contactFormSubmit">
-                    <button type="submit">Send</button>
-                </div>
-            </form>
-
-            <div id="status"></div>
-        </div>
+            <div id="contactFormMessage">
+                <textarea name="message" placeholder="Message" required></textarea>
+            </div>
+            <div id="contactFormSubmit">
+                <button type="submit">Send</button>
+            </div>
+        </form>
+        <div id="status"></div>
         <script>
             document.getElementById("contactForm").addEventListener("submit", async function (e) {
                 e.preventDefault();
@@ -234,10 +144,6 @@
                 document.getElementById("status").innerText = text;
             });
         </script>
-    </main>
-    <footer>
-        <p>&copy; 2026 HoferAyTee. All rights reserved. | <a href="imprint.html">Imprint</a> | <a
-                href="privacy.html">Privacy Policy</a></p>
     </footer>
 </body>
 

@@ -1,481 +1,179 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto;
+    display: flex;
+    flex-direction: column;
 }
 
-
-/* -------------
-   STRUCTURE
-   -------------*/
-
-/* Header */
 header {
-    background: #737e95;
-    grid-column: 1 / 13;
-    grid-row: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-/* Page */
-main {
-    grid-column: 1 / 13;
-    grid-row: 2;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    gap: 1rem;
-}
-
-/* Footer */
-footer {
-    grid-column: 1 / 13;
-    grid-row: 3;
-    text-align: left;
-    padding: 3rem;
-    background: #737e95;
-    color: #613718;
-    margin-top: 3rem;
-}
-
-/* ---------------
-    Header ELEMENTS
-    ---------------*/
-/* Title */
-#menuContainer {
-    border: none;
-}
-
-#menuContainer img {
-    border: none;
-    background: #737e95;
-    width: 4rem;
-    height: 4rem;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#menuContainer button {
-    border: none;
-}
-
-#siteTitle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-header h1 {
-    color: #613718;
-}
-
-header p {
-    color: #613718;
-}
-
-#logo img {
-    width: 4rem;
-    height: 4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Navbar */
-#dropDownMenu {
-    display: none;
-    position: absolute;
-    top: 4rem;
-    left: 0;
-    background: #737e95;
-}
-
-#dropDownMenu ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    background-color: lightgray;
     padding: 1rem;
 }
 
-#dropDownMenu ul li a {
-    color: #613718;
-    text-decoration: none;
+#logo, #menu {
+    width: 4rem;
+    height: 4rem;
 }
 
-#menuContainer:hover #dropDownMenu,
-#menuContainer:focus-within #dropDownMenu {
+#bMenu {
+    border: none;
+    background: none;
+}
+
+#ddMenu {
+    display: none;
+    position: absolute;
+    text-align: left;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+#bMenu:hover #ddMenu,
+#bMenu:focus-within #ddMenu,
+#ddMenu:hover,
+#ddMenu:focus-within {
     display: block;
 }
 
-/* -----------------
-   MAIN ELEMENTS
-   ----------------*/
-#titleOverview {
-    grid-column: 1 / 3;
-    grid-row: 1;
-    color: #613718;
-    text-align: center;
-    margin-top: 2rem;
-    
-}
-#pageElementOverview {
-    grid-column: 1 / 3;
-    grid-row: 2;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    gap: 2rem;
-    margin-left: 3rem;
-    margin-right: 3rem;
-}
-#welcome {
-    padding: 1rem;
-    grid-column: 1 / 3;
-    grid-row: 1;
-    text-align: center;
-    border-style: double;
-    border-width: 0.7rem;
-    border-color: #613718;
-}
-#welcome button {
-    border: none;
-    background: #613718;
-    color: white;
-    padding: 1rem 2rem;
-    cursor: pointer;
-    border-radius: 2rem;
-    margin-top: 1rem    ;
-}
-#yourPartner {
-    padding: 1rem;
-    grid-column: 1;
-    grid-row: 2;
-    text-align: center;
-    border-style: double;
-    border-width: 0.7rem;
-    border-color: #613718;
-}
-#allTheTime {
-    padding: 1rem;
-    grid-column: 2;
-    grid-row: 2;
-    text-align: center;
-    border-style: double;
-    border-width: 0.7rem;
-    border-color: #613718;
-}
-#yourPartner img, #allTheTime img {
-    width: 7rem;
-    height: 7rem;
+#ddMenu ul {
+    list-style: none;
 }
 
-#titleService {
-    grid-column: 1 / 3;
-    grid-row: 3;
-    color: #613718;
-    text-align: center;
-    margin-top: 2rem;
-}
-#pageElementService1 {
-    grid-column: 1 / 3;
-    grid-row: 4;
-    display: flex;
-    margin-left: 3rem;
-    margin-right: 3rem;
-}
-#serviceElementWebdesign, #serviceElementHosting, #serviceElementEmail {
-    flex: 1;
-}
-#pageElementService2 {
-    grid-column: 1 / 3;
-    grid-row: 5;
-    display: flex;
-    margin-left: 3rem;
-    margin-right: 3rem;
-}
-#serviceElementApplications, #serviceElementUpdates, #serviceElementMoreSupport {
-    flex: 1;
-}
-#pageElementService1 img, #pageElementService2 img {
-    width: 7rem;
-    height: 7rem;
-}
-#pageElementService1 button, #pageElementService2 button {  
-    border: none;
-    padding: 1rem 2rem;
-    cursor: pointer;
-    border-radius: 2rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+#ddMenu ul li {
+    margin-bottom: 1rem;
 }
 
-#titlePrice {
-    grid-column: 1 / 3;
-    grid-row: 6;
+#ddMenu ul li a {
+    text-decoration: none;
+    color:#613718;
+    font-size: 1.2rem;
+}
+
+h1 {
     color: #613718;
-    text-align: center;
+}
+
+h2 {
+    color: #613718;
+    margin-bottom: 1rem;
     margin-top: 2.5rem;
 }
-#pageElementPrice {
-    grid-column: 1 / 3;
-    grid-row: 7;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    gap: 2.5rem;
-    margin-left: 3rem;
-    margin-right: 3rem;
-}
-#oneOffPrices {
-    grid-column: 1;
-    grid-row: 1;
-}
-#yearlyPrices {
-    grid-column: 2;
-    grid-row: 1;
-}
-#oneOffPrices tr, #yearlyPrices tr {
-    text-align: left;
-}
-#oneOffPrices th, #oneOffPrices td, #yearlyPrices th, #yearlyPrices td {
-    padding: 2rem;
-    border-bottom: dotted 1px #613718;
+
+h3 {
+    color: #613718;
+    margin-bottom: 1rem;
 }
 
-#titleAboutMe {
-    grid-column: 1;
-    grid-row: 8;
-    color: #613718;
-    text-align: center;
-    margin-top: 2.5rem;
-}
-#pageElementAboutMe {
-    grid-column: 1;
-    grid-row: 9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    margin-left: 3rem;
-    border-style: double;
-    border-width: 0.7rem;
-    border-color: #613718;
+p {
+    color: #737e95;
 }
 
-#titleContact {
-    grid-column: 2;
-    grid-row: 8;
-    color: #613718;
-    text-align: center;
-    margin-top: 2.5rem;
-}
-#pageElementContact {
-    grid-column: 2;
-    grid-row: 9;
+main {
+    padding-left: 7rem;
+    padding-right: 7rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-#contactFormName, #contactFormEmail, #contactFormMessage, #contactFormSubmit {
-    margin-bottom: 1rem;
+
+.overview {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    text-align: center;
+    gap: 2rem;
 }
 
-/* Subpages */
-#titleApplications, #titleHosting, #titleEmail, #titleWebdesign, #titleUpdates, #titleMoreSupport {
+.overview img {
+    width: 5rem;
+    height: 5rem;
+}
+
+#overview1 {
     grid-column: 1 / 3;
     grid-row: 1;
-    color: #613718;
-    text-align: center;
-    margin-top: 2rem;
+    border-style: groove;
+    border-color: #613718;
+    border-width: 0.3rem;
+    padding: 2rem;
+    width: 35rem;
 }
-#textApplications, #textHosting, #textEmail, #textWebdesign, #textUpdates, #textMoreSupport {
-    grid-column: 1 / 3;
+
+#contact {
+    background-color: #613718;
+    border-radius: 2rem;
+    color: white;
+    padding: 1rem;
+    margin-top: 4rem;
+}
+
+#overview2 {
+    grid-column: 1;
     grid-row: 2;
-    text-align: center;
-    margin-left: 3rem;
-    margin-right: 3rem;
+    border-style: groove;
+    border-color: #613718;
+    border-width: 0.3rem;
+    padding: 2rem;
+    width: 25rem;
 }
 
-/*-----------
-   MEDIA
-------------*/
-@media (max-width: 768px) {
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+#overview3 {
+    grid-column: 2;
+    grid-row: 2;
+    border-style: groove;
+    border-color: #613718;
+    border-width: 0.3rem;
+    padding: 2rem;
+    width: 25rem;
+}
 
-    body {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: 1;
-    }
+.textArea {
+    display: flex;
+    border-style: groove;
+    border-color: #613718;
+    border-width: 0.3rem;
+    padding: 2rem;
+}
 
-    /* Header */
-    header {
-        background: #737e95;
-        grid-column: 1;
-        grid-row: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+#portrait {
+    width: 10rem;
+    height: auto;
+}
 
-    /* Page Elements */
-    #titleOverview {
-        grid-column: 1;
-        grid-row: 2;
-        color: #613718;
-        text-align: center;
-        margin-top: 2rem;
-    }
+.service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35rem;
+    height: auto;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-style: groove;
+    border-color: #613718;
+    border-width: 0.06rem;
+    box-shadow: #613718 0 0 0.5rem;
+}
+.service img {
+    width: 7rem;
+    height: 7rem;
+}
 
-    #welcome {
-        grid-column: 1;
-        grid-row: 3;
-        text-align: center;
-        margin-top: 1rem;
-        border-style: double;
-        border-width: 0.7rem;
-        border-color: #613718;
-    }
+th, td {
+    padding: 0.5rem;
+    text-align: left;
+}
 
-    #yourPartner {
-        grid-column: 1;
-        grid-row: 4;
-        text-align: center;
-        margin-top: 1rem;
-        border-style: double;
-        border-width: 0.7rem;
-        border-color: #613718;
-    }
-
-    #allTheTime {
-        grid-column: 1;
-        grid-row: 5;
-        text-align: center;
-        margin-top: 1rem;
-        border-style: double;
-        border-width: 0.7rem;
-        border-color: #613718;
-    }
-
-    #titleService {
-        grid-column: 1;
-        grid-row: 6;
-        color: #613718;
-        text-align: center;
-        margin-top: 2rem;
-    }
-
-    #pageElementService1 {
-        grid-column: 1;
-        grid-row: 7;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 1rem;
-    }
-
-    #pageElementService2 {
-        grid-column: 1;
-        grid-row: 8;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 1rem;
-    }
-
-    #titlePrice {
-        grid-column: 1;
-        grid-row: 9;
-        color: #613718;
-        text-align: center;
-        margin-top: 2.5rem;
-    }
-
-    #oneOffPrices {
-        grid-column: 1;
-        grid-row: 10;
-        text-align: left;
-        margin-top: 1rem;
-    }
-
-    #yearlyPrices {
-        grid-column: 1;
-        grid-row: 11;
-        text-align: left;
-        margin-top: 1rem;
-    }
-
-    #titleAboutMe {
-        grid-column: 1;
-        grid-row: 12;
-        color: #613718;
-        text-align: center;
-        margin-top: 2rem;
-    }
-
-    #pageElementAboutMe {
-        grid-column: 1;
-        grid-row: 13;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 2rem;
-        margin-top: 1rem;
-        border-style: double;
-        border-width: 0.7rem;
-        border-color: #613718;
-    }
-
-    #titleContact {
-        grid-column: 1;
-        grid-row: 14;
-        color: #613718;
-        text-align: center;
-        margin-top: 2rem;
-    }
-
-    #pageElementContact {
-        grid-column: 1;
-        grid-row: 15;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 1rem;
-    }
-
-    #status {
-        grid-column: 1;
-        grid-row: 16;
-        text-align: center;
-        margin-top: 1rem;
-    }
-
-    footer {
-        grid-column: 1;
-        grid-row: 17;
-        text-align: left;
-        padding: 3rem;
-        background: #737e95;
-        color: #613718;
-        margin-top: 2rem;
-    }
-
+footer {
+    background-color: lightgray;
+    display: flex;
+    padding: 1rem;
+    margin-top: 2rem;
 }
