@@ -113,6 +113,7 @@ main {
     color: white;
     padding: 1rem;
     margin-top: 4rem;
+    cursor: pointer;
 }
 
 #overview2 {
@@ -205,8 +206,7 @@ footer {
     }
 
     #portrait {
-        width: auto;
-        height: 5rem;
+        display: none;
     }
 
     .service {
